@@ -5,7 +5,7 @@ import os
 
 TRUE_W = 2.0
 TRUE_b = 0.0
-NUM_SAMPLES = 4000
+NUM_SAMPLES = 100
 
 checkpoint_path = "demo_1/cp.ckpt"
 checkpoint_dir = os.path.dirname(checkpoint_path)
@@ -35,12 +35,11 @@ for i in range(10):
 # 保存模型
 # model.save('demo_1/my_model.h5')
 
-# plt.xlabel('Epoch Number')
-# plt.ylabel("Loss Magnitude")
-# print(history.history)
-# plt.plot(history.history['loss'])
-# plt.legend()
-# plt.show()
+plt.xlabel('Epoch Number')
+plt.ylabel("Loss Magnitude")
+plt.plot(history.history['loss'], label='loss')
+plt.legend()
+plt.show()
 
 # plt.scatter(train_X, train_Y)
 # plt.plot(train_X, model(train_X), c='r')
