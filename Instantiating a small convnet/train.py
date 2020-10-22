@@ -28,8 +28,8 @@ model.summary()
 
 
 # 训练模型
-history = models.fit(train_images, train_labels, epochs=5, batch_size=64)
+history = model.fit(train_images, train_labels, epochs=5, batch_size=64)
 
 # 验证
-test_loss, test_acc = models.evaluate(test_images, test_labels)
+test_loss, test_acc = model.evaluate(test_images, test_labels)
 print('test_acc:', test_acc)
